@@ -1762,7 +1762,7 @@ set_timeout(int timeout)
 void
 switch_ns (struct sockaddr_in *ns)
 {
-    res_init();
+//    res_init();
     memcpy (&_res.nsaddr_list[0], ns, sizeof(*ns));
     _res.nscount = 1;
     debug("Using nameserver at %s\n", inet_ntoa(ns->sin_addr));
